@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: radial-gradient(circle, #c9d6df, #f0f5f9);
+    color: #1e2022;
+    font-family: "Balsamiq sans", sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 1.5rem;
+}
+
+header, form, .first-row {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-row input, .first-row button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    color: #c9d6df;
+    border: none;
+    background-color: #1e2022;
+}
+
+.first-row button {
+    color: #c9d6df;
+    background-color: #1e2022;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.first-row button:hover {
+    color: #1e2022;
+    background-color: #c9d6df;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    background-color: #52616b;
+    color: #c9d6df;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(30deg);
+    opacity: 0;
+}
+
+.todo li {
+    flex: 1;
+    min-width: 0;
+    white-space: pre-line;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.todo li:hover {
+    overflow: visible;
+}
+
+.delete-btn, .complete-btn {
+    background-color: #c9d6df;
+    color: #1e2022;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.delete-btn {
+    background: #1e2022;
+    color: #c9d6df;
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.fas {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+select {
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+@media only screen and (max-width: 800px){
+    form {
+        flex-direction: column;
+        min-height: 10vh;
+    }
+
+    .first-row {
+        min-height: 0;
+        margin-bottom: 0;
+    }
+
+    input {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .todo {
+        font-size: 1rem;
+    }
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    background-color: #1e2022;
+    color: #c9d6df;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    background-color: #1e2022;
+    color: #c9d6df;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after {
+    background-color: #52616b;
+}
