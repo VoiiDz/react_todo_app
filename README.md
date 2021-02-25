@@ -1,5 +1,5 @@
 # TO DO APP
-Check it live in the link below
+Check it live in this link
 https://voiidz.github.io/react_todo_app/
 
 ## Languages and tools
